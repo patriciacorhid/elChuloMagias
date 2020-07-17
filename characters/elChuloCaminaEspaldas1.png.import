@@ -1,0 +1,17 @@
+[remap]
+
+importer="texture_atlas"
+type="Texture"
+path="res://.import/elChuloCaminaEspaldas1.png-0af6df9852db1faea0e7f6f8c57c9188.res"
+group_file="res://atlasChulo.png"
+valid=true
+[deps]
+
+
+source_file="res://characters/elChuloCaminaEspaldas1.png"
+dest_files=[ "res://.import/elChuloCaminaEspaldas1.png-0af6df9852db1faea0e7f6f8c57c9188.res" ]
+
+[params]
+
+atlas_file="res://atlasChulo.png"
+import_mode=0
