@@ -40,7 +40,6 @@ animations = [ {
 [node name="Node2D" type="Node2D"]
 
 [node name="ElChulo" type="AnimatedSprite" parent="."]
-position = Vector2( 85.5754, 511.274 )
 scale = Vector2( 0.15, 0.15 )
 frames = SubResource( 1 )
 animation = "Caminar"

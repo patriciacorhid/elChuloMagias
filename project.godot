@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="ElChuloMagias"
-run/main_scene="res://elChuloMagias.tscn"
+run/main_scene="res://Escena.tscn"
 config/icon="res://icon.png"
 
 [rendering]

@@ -7,7 +7,7 @@ var contador_atacar = 0
 var direccion = Vector2(1, 0)
 
 #Atributos (ataque, velocidad...)
-const walk_speed = 200
+const walk_speed = 200   #píxeles/segundo
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -57,9 +57,9 @@ func _process(delta):
 			bola.get_node("bolaMagia").set_scale(get_scale()/4)
 			bola.get_node("bolaMagia").set_position(position+direccion*Vector2(25, 25))
 			bola.get_node("bolaMagia").set_velocidad(500*direccion)
-			get_node("/root/Node2D").add_child(bola)
+			get_parent().add_child(bola)
 			puede_disparar = false
-			$timer_ataque.start(0.5)
+			$timer_ataque.start(1)
 			match contador_atacar:
 				0:
 					frame = 0
