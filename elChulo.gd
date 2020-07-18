@@ -1,10 +1,12 @@
 extends AnimatedSprite
 
-# Declare member variables here. Examples:
+# Variables internas
 var scene_BolaMagia
 var puede_disparar = true
 var contador_atacar = 0
 
+#Atributos (ataque, velocidad...)
+const walk_speed = 200
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -33,12 +35,12 @@ func _process(delta):
 					frame = 1
 			contador_atacar = (contador_atacar+1)%2
 	if Input.is_key_pressed(KEY_LEFT):
-		position.x -= 10
+		position.x -= walk_speed*delta
 		set_flip_h(true)
 	if Input.is_key_pressed(KEY_RIGHT):
-		position.x += 10
+		position.x += walk_speed*delta
 		set_flip_h(false)
 	if Input.is_key_pressed(KEY_UP):
-		position.y -= 10
+		position.y -= walk_speed*delta
 	if Input.is_key_pressed(KEY_DOWN):
-		position.y += 10
+		position.y += walk_speed*delta
