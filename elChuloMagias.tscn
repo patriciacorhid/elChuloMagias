@@ -21,15 +21,15 @@ animations = [ {
 "name": "Caminar",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "Atacar",
-"speed": 0.0
-}, {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "Defender",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Atacar",
+"speed": 0.0
 }, {
 "frames": [ ExtResource( 3 ), ExtResource( 7 ) ],
 "loop": true,
