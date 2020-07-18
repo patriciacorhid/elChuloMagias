@@ -46,4 +46,4 @@ frames = SubResource( 1 )
 animation = "Caminar"
 script = ExtResource( 2 )
 
-[node name="Timer" type="Timer" parent="ElChulo"]
+[node name="timer_ataque" type="Timer" parent="ElChulo"]

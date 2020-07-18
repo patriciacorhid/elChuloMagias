@@ -11,7 +11,7 @@ const walk_speed = 200
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	scene_BolaMagia = load("res://BolaMagia.tscn")
-	$Timer.connect("timeout", self, "permitir_disparar")
+	$timer_ataque.connect("timeout", self, "permitir_disparar")
 	
 func permitir_disparar():
 	set_animation("Caminar")
@@ -27,7 +27,7 @@ func _process(delta):
 			bola.get_node("bolaMagia").set_velocidad(Vector2(500, 0))
 			get_parent().add_child(bola)
 			puede_disparar = false
-			$Timer.start(0.5)
+			$timer_ataque.start(0.5)
 			match contador_atacar:
 				0:
 					frame = 0
@@ -37,10 +37,18 @@ func _process(delta):
 	if Input.is_key_pressed(KEY_LEFT):
 		position.x -= walk_speed*delta
 		set_flip_h(true)
+		set_animation("Caminar")
+		set_playing(true)
 	if Input.is_key_pressed(KEY_RIGHT):
 		position.x += walk_speed*delta
 		set_flip_h(false)
+		set_animation("Caminar")
+		set_playing(true)
 	if Input.is_key_pressed(KEY_UP):
 		position.y -= walk_speed*delta
+		set_animation("CaminarEspaldas")
+		set_playing(true)
 	if Input.is_key_pressed(KEY_DOWN):
 		position.y += walk_speed*delta
+		set_animation("Caminar")
+		playing = true
