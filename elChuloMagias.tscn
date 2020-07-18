@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://characters/elChulo.png" type="Texture" id=1]
 [ext_resource path="res://elChulo.gd" type="Script" id=2]
@@ -16,16 +16,6 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 8 ) ],
-"loop": true,
-"name": "Caminar",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 1 ) ],
-"loop": true,
-"name": "Defender",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "Atacar",
@@ -35,14 +25,30 @@ animations = [ {
 "loop": true,
 "name": "CaminarEspaldas",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "Caminar",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "Defender",
+"speed": 5.0
 } ]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 20.7122, 46.5538 )
 
-[node name="ElChulo" type="AnimatedSprite" parent="."]
+[node name="ElChulo" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="sprite_el_chulo" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.15, 0.15 )
 frames = SubResource( 1 )
 animation = "Caminar"
-script = ExtResource( 2 )
 
-[node name="timer_ataque" type="Timer" parent="ElChulo"]
+[node name="collider_el_chulo" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="timer_ataque" type="Timer" parent="."]
